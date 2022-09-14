@@ -35,4 +35,8 @@
 #canvas1 {
     box-shadow: inset 5px 5px 5px black;
     border: 1px solid black;
+    background: url(105_mushroom_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
