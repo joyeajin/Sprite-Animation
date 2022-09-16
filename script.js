@@ -29,9 +29,9 @@ window.addEventListener('load', function () {
             this.minFrame = 0;
             this.maxFrame = 355;
 
-            this.frame = 18;
-            this.frameX = 0;
-            this.frameY = 15;
+            // this.frame = 18;
+            // this.frameX = 0;
+            // this.frameY = 15;
             // 초기 설정때 썼던 값! 뒤로 가면 하드코딩 말고 움직이는 값으로 다시 지정됨
         }
         draw() {
@@ -44,6 +44,7 @@ window.addEventListener('load', function () {
         }
         update() {
             this.frame = this.frame < this.maxFrame ? this.frame + 1 : this.minFrame
+            // this.frame이 this.maxFrame(355) 보다 작으면 this.frame에 1을 더해주고, 그렇지 않다면(355보다 커지면) this.minFrame(0)이 돼라는 뜻
 
             this.frameX = this.frame % 18;
             // this.frame 을 18로 나눈 나머지값
