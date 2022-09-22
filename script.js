@@ -26,6 +26,8 @@ window.addEventListener('load', function () {
 
             this.x = this.canvasWidth / 2 - this.spriteWidth * this.scale / 2;
             this.y = this.canvasHeight / 2 - this.spriteHeight * this.scale / 2;
+            //이미지를 딱 가운데에 맞추기 위한 식
+
             this.minFrame = 0;
             this.maxFrame = 355;
 
@@ -67,8 +69,11 @@ window.addEventListener('load', function () {
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        //clearRect(x, y, width, height)
         // 0, 0, canvas.width, canvas.height 만큼 구멍을 뚫어준다(여기서는 canvas의 전체 영역!)
+        //캔버스안에서 특정 영역을 지울 때 사용하는데, x = 0, y = 0, w = width, h = height로 설정하면 캔버스의 전체영역을 지울 수 있게 된다.
         //clearRect를 하지 않으면 잔상이 남게된다
+        //다른 속성으로는 fillRect(안이 채워진 사각형), strokeRect(안이 빈 사각형/선만 있는 사각형)이 있음.
 
         mandrake.draw();
         mandrake.update();
